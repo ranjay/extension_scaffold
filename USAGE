@@ -1,7 +1,7 @@
 Description:
     Scaffolds an entire resource, from model and migration to controller and
     views, along with a full test suite. The resource is ready to use as a
-    starting point for your RESTful, resource-oriented application.
+    starting point for your RESTful, resource-oriented application for an extension.
 
     Pass the name of the model (in singular form), either CamelCased or
     under_scored, as the first argument, and an optional list of attribute
@@ -14,16 +14,22 @@ Description:
     You don't have to think up every attribute up front, but it helps to
     sketch out a few so you can start working with the resource immediately.
 
-    For example, 'scaffold post title:string body:text published:boolean'
+    For example, 'scaffold extension_name post title:string body:text published:boolean'
     gives you a model with those three attributes, a controller that handles
     the create/show/update/destroy, forms to create and edit your posts, and
     an index that lists them all, as well as a map.resources :posts
-    declaration in config/routes.rb.
+    declaration in config/routes.rb for an extension.
 
     If you want to remove all the generated files, run
-    'script/destroy scaffold ModelName'.
+    'script/destroy scaffold extension_name ModelName'.
 
 Examples:
-    `./script/generate scaffold post`
-    `./script/generate scaffold post title:string body:text published:boolean`
-    `./script/generate scaffold purchase order_id:integer amount:decimal`
+    `./script/generate scaffold extension_name post`
+    `./script/generate scaffold extension_name post title:string body:text published:boolean`
+    `./script/generate scaffold extension_name purchase order_id:integer amount:decimal`
+    
+    Extension functionality is widely getting used in project where main source code is from
+    other source and version is getting changed on time,
+    so using extension you can keep your code code seperate from main source.
+    
+    Ex:-building a site with http://spreehq.org/
